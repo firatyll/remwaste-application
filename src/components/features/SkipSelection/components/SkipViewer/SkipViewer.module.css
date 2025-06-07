@@ -108,7 +108,8 @@
 
 .mobileContainer .skipBadge {
   top: -10px;
-  right: -10px;
+  left: -10px;
+  right: auto;
 }
 
 .mobileContainer .skipFallback {

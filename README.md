@@ -5,6 +5,12 @@ The application features a clean, **responsive design**, **dynamic theme system*
 
 > 🎨 **AI-generated skip illustrations** have been designed to match the app's color palette and enhance visual consistency.
 
+## 🌐 Live Demo
+
+**🚀 [View Live Application](https://remwaste-application.vercel.app/)**
+
+Try the application directly in your browser with full functionality and responsive design.
+
 ---
 
 ## 🚀 Features

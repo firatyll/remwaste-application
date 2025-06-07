@@ -84,4 +84,25 @@
   font-size: 16px;
   font-weight: 900;
   line-height: 1;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .small {
+    padding: 8px 12px;
+    font-size: 11px;
+    min-width: 60px;
+  }
+
+  .medium {
+    padding: 10px 16px;
+    font-size: 13px;
+    min-width: 80px;
+  }
+
+  .large {
+    padding: 12px 20px;
+    font-size: 14px;
+    min-width: 100px;
+  }
 } 
