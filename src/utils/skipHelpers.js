@@ -9,7 +9,11 @@
  */
 export const getSkipFeatures = (skip) => {
   const features = [];
-  if (skip.allowed_on_road) features.push('Road Placement');
+  if (skip.allowed_on_road) {
+    features.push('Road Placement');
+  } else {
+    features.push('Not on the Road');
+  }
   if (skip.allows_heavy_waste) features.push('Heavy Waste');
   features.push(`${skip.hire_period_days} Day Hire`);
   return features;

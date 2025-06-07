@@ -65,4 +65,9 @@
     font-size: 1.1rem;
     font-weight: 600;
   }
+
+  /* Hide theme toggle on mobile */
+  .rightSection :global(:first-child) {
+    display: none;
+  }
 } 

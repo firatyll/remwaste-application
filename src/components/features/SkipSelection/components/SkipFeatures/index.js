@@ -6,11 +6,18 @@ import styles from './SkipFeatures.module.css';
 const SkipFeatures = ({ skip, variant = 'desktop' }) => {
   const features = getSkipFeatures(skip);
 
+  const getBadgeVariant = (feature) => {
+    if (feature === 'Not on the Road') return 'danger';
+    if (feature === 'Road Placement') return 'success';
+    if (feature.includes('Heavy Waste')) return 'warning';
+    return 'primary'; // Default for hire period
+  };
+
   if (variant === 'mobile') {
     return (
       <div className={styles.mobileContainer}>
         {features.map((feature, index) => (
-          <Badge key={index} variant="primary" size="small">
+          <Badge key={index} variant={getBadgeVariant(feature)} size="small">
             {feature}
           </Badge>
         ))}
@@ -21,10 +28,9 @@ const SkipFeatures = ({ skip, variant = 'desktop' }) => {
   return (
     <div className={styles.container}>
       {features.map((feature, index) => (
-        <div key={index} className={styles.featureItem}>
-          <span className={styles.featureIcon}>✅</span>
-          <span className={styles.featureText}>{feature}</span>
-        </div>
+        <Badge key={index} variant={getBadgeVariant(feature)} size="medium">
+          {feature}
+        </Badge>
       ))}
     </div>
   );

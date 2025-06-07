@@ -21,7 +21,7 @@ const SizeControls = ({
         ◀
       </button>
       <span className={styles.sizeDisplay}>
-        {skip.size} {variant === 'mobile' ? 'yard' : 'Yard'}
+        {skip.size} Yard
       </span>
       <button 
         className={styles.sizeButton}

@@ -17,59 +17,136 @@
   text-align: center;
   margin-bottom: 20px;
   min-height: 150px;
+  width: 100%;
+  max-width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: background 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.mobileThemeToggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 20;
 }
 
 .skipIllustration {
   position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .skipContainer {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 200px;
 }
 
-.skipBody {
-  width: 120px;
-  height: 80px;
-  background: #333;
-  border-radius: 5px 5px 0 0;
-  position: relative;
-  margin: 0 auto;
+.skipImage {
+  max-width: 100%;
+  max-height: 160px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
 }
 
-.skipBody::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: 10px;
-  right: 10px;
-  height: 15px;
-  background: #555;
-  border-radius: 5px 5px 0 0;
+.skipFallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border: 2px dashed var(--border-secondary);
+  min-width: 100px;
+  min-height: 80px;
 }
 
-.skipBody::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: -10px;
-  right: -10px;
-  height: 10px;
-  background: #222;
-  border-radius: 0 0 5px 5px;
+.skipIcon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  opacity: 0.7;
+}
+
+.skipSize {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-primary);
 }
 
 .skipBadge {
   position: absolute;
   top: -15px;
   right: -15px;
+  z-index: 10;
 }
 
 /* Mobile specific styles */
-.mobileContainer .skipBody {
-  width: 80px;
-  height: 60px;
+.mobileContainer .skipImage {
+  max-height: 130px;
+  max-width: 180px;
+}
+
+.mobileContainer .skipContainer {
+  max-width: 180px;
+  width: 100%;
+}
+
+.mobileContainer .skipBadge {
+  top: -10px;
+  right: -10px;
+}
+
+.mobileContainer .skipFallback {
+  min-width: 80px;
+  min-height: 60px;
+  padding: 15px;
+}
+
+.mobileContainer .skipIcon {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.mobileContainer .skipSize {
+  font-size: 1rem;
+}
+
+/* Hover effects */
+.container:hover .skipImage {
+  transform: scale(1.05);
+}
+
+.mobileContainer:hover .skipImage {
+  transform: scale(1.02);
+}
+
+.container:hover .skipFallback {
+  transform: scale(1.05);
+  border-color: var(--accent-secondary);
+}
+
+/* Theme transition effects */
+@media (prefers-reduced-motion: no-preference) {
+  .skipImage {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .skipFallback {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 } 

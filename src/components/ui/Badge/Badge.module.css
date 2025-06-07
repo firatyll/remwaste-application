@@ -24,6 +24,20 @@
   color: white;
 }
 
+.danger {
+  background: linear-gradient(135deg, #ff4757, #ff3838);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.warning {
+  background: linear-gradient(135deg, #ffa726, #ff9800);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 167, 38, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 /* Sizes */
 .small {
   padding: 6px 12px;
