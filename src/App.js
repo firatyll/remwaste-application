@@ -1,12 +1,15 @@
 import React from 'react';
 import SkipSelection from './components/SkipSelection';
+import { ThemeProvider } from './contexts/ThemeContext';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <SkipSelection />
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <SkipSelection />
+      </div>
+    </ThemeProvider>
   );
 }
 

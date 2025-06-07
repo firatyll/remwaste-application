@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import skipsData from '../data/skips.json';
+import ThemeToggle from './ThemeToggle';
 import './SkipSelection.css';
 
 const SkipSelection = () => {
@@ -17,7 +18,7 @@ const SkipSelection = () => {
     const transportCost = skip.transport_cost || 0;
     const perTonneCost = skip.per_tonne_cost || 0;
     
-    // VAT sadece base price üzerinden hesaplanır
+    // VAT is calculated only on base price
     const vatAmount = (basePrice * skip.vat) / 100;
     const total = basePrice + transportCost + perTonneCost + vatAmount;
     
@@ -71,13 +72,16 @@ const SkipSelection = () => {
           <div className="current-stage">
             <span className="stage-text">Choose Your Skip Size</span>
           </div>
-          <button 
-            className="nav-btn next-btn" 
-            disabled={false}
-          >
-            <span>Next</span>
-            <span className="arrow">▶</span>
-          </button>
+          <div className="nav-right-section">
+            <ThemeToggle />
+            <button 
+              className="nav-btn next-btn" 
+              disabled={false}
+            >
+              <span>Next</span>
+              <span className="arrow">▶</span>
+            </button>
+          </div>
         </div>
 
         {/* Desktop Layout */}
