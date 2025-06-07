@@ -1,0 +1,58 @@
+/* CSS Variables for Theme Support */
+:root {
+  /* Light Theme Colors */
+  --bg-primary: linear-gradient(135deg, #ffffff 0%, #fff8e7 100%);
+  --bg-secondary: white;
+  --bg-accent: #fff8e7;
+  --text-primary: #333;
+  --text-secondary: #666;
+  --text-accent: #2c3e50;
+  --border-primary: rgba(255, 215, 0, 0.3);
+  --border-secondary: rgba(255, 149, 0, 0.3);
+  --gradient-primary: linear-gradient(90deg, #ffd700 0%, #ff9500 100%);
+  --gradient-secondary: linear-gradient(135deg, #ffd700 0%, #ff9500 100%);
+  --shadow-light: 0 4px 15px rgba(255, 215, 0, 0.15);
+  --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.1);
+  
+  /* Button Colors */
+  --btn-primary: linear-gradient(135deg, #ff9500 0%, #ff8000 100%);
+  --btn-primary-hover: linear-gradient(135deg, #e6850e 0%, #e67300 100%);
+  --btn-secondary: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  --btn-secondary-hover: linear-gradient(135deg, #ffed4e 0%, #fff59d 100%);
+  --btn-disabled: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%);
+  
+  /* Accent Colors */
+  --accent-primary: #ffd700;
+  --accent-secondary: #ff9500;
+  --success-color: #2ecc71;
+  --feature-bg: #ff9500;
+}
+
+[data-theme="dark"] {
+  /* Dark Theme Colors */
+  --bg-primary: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  --bg-secondary: #2d3748;
+  --bg-accent: #4a5568;
+  --text-primary: #e2e8f0;
+  --text-secondary: #a0aec0;
+  --text-accent: #cbd5e0;
+  --border-primary: rgba(76, 175, 80, 0.3);
+  --border-secondary: rgba(102, 187, 106, 0.3);
+  --gradient-primary: linear-gradient(90deg, #4CAF50 0%, #388E3C 100%);
+  --gradient-secondary: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+  --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.3);
+  --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.4);
+  
+  /* Button Colors */
+  --btn-primary: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%);
+  --btn-primary-hover: linear-gradient(135deg, #388E3C 0%, #2E7D32 100%);
+  --btn-secondary: linear-gradient(135deg, #66BB6A 0%, #81C784 100%);
+  --btn-secondary-hover: linear-gradient(135deg, #81C784 0%, #A5D6A7 100%);
+  --btn-disabled: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+  
+  /* Accent Colors */
+  --accent-primary: #4CAF50;
+  --accent-secondary: #66BB6A;
+  --success-color: #66BB6A;
+  --feature-bg: #388E3C;
+} 

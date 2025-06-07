@@ -1,0 +1,87 @@
+.button {
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: var(--shadow-light);
+  color: white;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.button:hover:not(.disabled)::before {
+  left: 100%;
+}
+
+/* Variants */
+.primary {
+  background: var(--btn-primary);
+}
+
+.primary:hover:not(.disabled) {
+  background: var(--btn-primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px var(--border-primary);
+}
+
+.secondary {
+  background: var(--btn-secondary);
+}
+
+.secondary:hover:not(.disabled) {
+  background: var(--btn-secondary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px var(--border-secondary);
+}
+
+/* Sizes */
+.small {
+  padding: 10px 18px;
+  font-size: 12px;
+  min-width: 80px;
+  border-radius: 20px;
+}
+
+.medium {
+  padding: 14px 28px;
+  font-size: 14px;
+  min-width: 130px;
+}
+
+.large {
+  padding: 16px 32px;
+  font-size: 16px;
+  min-width: 150px;
+}
+
+/* States */
+.disabled {
+  background: var(--btn-disabled);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #999;
+  opacity: 0.6;
+}
+
+.arrow {
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1;
+} 

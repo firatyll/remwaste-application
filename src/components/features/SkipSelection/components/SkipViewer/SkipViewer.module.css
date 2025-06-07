@@ -1,0 +1,75 @@
+.container {
+  background: var(--bg-accent);
+  border: 1px solid var(--border-primary);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.mobileContainer {
+  background: var(--gradient-secondary);
+  border-radius: 12px;
+  padding: 30px 15px;
+  text-align: center;
+  margin-bottom: 20px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.skipIllustration {
+  position: relative;
+}
+
+.skipContainer {
+  position: relative;
+}
+
+.skipBody {
+  width: 120px;
+  height: 80px;
+  background: #333;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+.skipBody::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  right: 10px;
+  height: 15px;
+  background: #555;
+  border-radius: 5px 5px 0 0;
+}
+
+.skipBody::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: -10px;
+  right: -10px;
+  height: 10px;
+  background: #222;
+  border-radius: 0 0 5px 5px;
+}
+
+.skipBadge {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+}
+
+/* Mobile specific styles */
+.mobileContainer .skipBody {
+  width: 80px;
+  height: 60px;
+} 

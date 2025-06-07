@@ -1,0 +1,128 @@
+.container {
+  border: 1px solid var(--border-secondary);
+  border-radius: 10px;
+  padding: 15px;
+  background: var(--bg-accent);
+  margin-top: auto;
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.priceContent {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.priceItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.priceLabel {
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: normal;
+  transition: color 0.3s ease;
+}
+
+.priceValue {
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.priceDivider {
+  border-top: 1px solid var(--border-secondary);
+  margin: 10px 0 8px 0;
+  transition: border-color 0.3s ease;
+}
+
+.priceTotal {
+  text-align: right;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--accent-secondary);
+  transition: color 0.3s ease;
+}
+
+/* Custom scrollbar for webkit browsers */
+.container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: var(--bg-accent);
+  border-radius: 3px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: var(--border-secondary);
+  border-radius: 3px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-secondary);
+}
+
+/* Mobile styles */
+.mobileContainer {
+  background: var(--bg-accent);
+  padding: 18px;
+  border-radius: 12px;
+  transition: background 0.3s ease;
+}
+
+.mobileBreakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobileItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.mobileItem span:first-child {
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.mobileItem span:last-child {
+  color: var(--text-primary);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.mobileDivider {
+  border-top: 1px solid var(--border-secondary);
+  margin: 8px 0 5px 0;
+  transition: border-color 0.3s ease;
+}
+
+.mobileTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.mobileTotal span:first-child {
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.mobileTotal span:last-child {
+  color: var(--accent-secondary);
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+} 

@@ -1,0 +1,23 @@
+.card {
+  background: var(--bg-secondary);
+  border-radius: 15px;
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.default {
+  padding: 20px;
+  border: 1px solid var(--border-primary);
+}
+
+.accent {
+  background: var(--bg-accent);
+  padding: 25px;
+  border: 1px solid var(--border-secondary);
+}
+
+.bordered {
+  border: 2px solid var(--accent-primary);
+  padding: 25px;
+  box-shadow: var(--shadow-medium);
+} 
