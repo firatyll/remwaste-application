@@ -225,7 +225,6 @@ Components related to theming and user preferences:
 User-agent: *
 Allow: /
 Crawl-delay: 1
-# Sitemap: https://yourdomain.com/sitemap.xml
 ```
 
 ### **manifest.json** (PWA Configuration)
